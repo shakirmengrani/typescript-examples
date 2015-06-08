@@ -1,4 +1,4 @@
-var calc = { 
+const calc = { 
 	num1:0, 
 	num2:0,
 	add:function():number{
