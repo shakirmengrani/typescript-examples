@@ -46,7 +46,7 @@ class Person implements IPerson{
 	}
 	
 	// Add data into obj named memory
-	public add = function(object:IPerson):void{
+	public add(object:IPerson):void{
 		var data:IPerson = {
 			FirstName:object.FirstName,
 			LastName:object.LastName,
@@ -56,20 +56,20 @@ class Person implements IPerson{
 		Person.obj.push(data);	
 	} 
 	// get all persons from obj
-	public getObjs = function():Array<IPerson>{
-			return Person.obj;
+	public getObjs():Array<IPerson>{
+		return Person.obj;
 	}
 	// get specfic person from obj
-	public getObjAt = function(Index:number):IPerson{
+	public getObjAt(Index:number):IPerson{
 		return Person.obj[Index];
 	}
 	// remove specfic person from obj
-	public removeObj = function(object:IPerson):void{
+	public removeObj(object:IPerson):void{
 		var offset = Person.obj.indexOf(object,0);
 		Person.obj.slice(offset,1);
 	}
 	// get total number of persons from obj
-	public countObj = function():number{
+	public countObj():number{
 		return Person.obj.length;
 	}
 }
