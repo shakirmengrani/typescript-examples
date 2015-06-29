@@ -6,6 +6,8 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
+if (typeof __metadata !== "function") __metadata = function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
@@ -32,8 +34,10 @@ var myComp = (function () {
             directives: [
                 angular2_1.NgFor
             ]
-        })
+        }), 
+        __metadata('design:paramtypes', [dataFactory])
     ], myComp);
     return myComp;
 })();
 angular2_1.bootstrap(myComp);
+//# sourceMappingURL=app.js.map
