@@ -14,7 +14,9 @@ var angular2_1 = require('angular2/angular2');
 var dataFactory = (function () {
     function dataFactory() {
         this.rows = [];
-        this.rows.push({ name: "shakir", email: "shakir@example.com" });
+        this.rows.push({ name: "Shakir Mengrani", email: "shakir@example.com" });
+        this.rows.push({ name: "Abdul Basit", email: "basit@example.com" });
+        this.rows.push({ name: "Bilal", email: "bilal@example.com" });
     }
     return dataFactory;
 })();
@@ -22,6 +24,7 @@ var myComp = (function () {
     function myComp(dataFactory) {
         this.name = "";
         this.name = "shakir";
+        console.log(dataFactory.rows);
         this.rows = dataFactory.rows;
     }
     myComp = __decorate([
@@ -30,7 +33,7 @@ var myComp = (function () {
             appInjector: [dataFactory]
         }),
         angular2_1.View({
-            template: "\n    <h1>Sup {{ name }}</h1>\n    <div *ng-for=\"#row of rows; #i = index\">{{ row.name }}</div>\n  ",
+            templateUrl: 'list.html',
             directives: [
                 angular2_1.NgFor
             ]
@@ -40,4 +43,3 @@ var myComp = (function () {
     return myComp;
 })();
 angular2_1.bootstrap(myComp);
-//# sourceMappingURL=app.js.map

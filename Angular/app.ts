@@ -11,8 +11,11 @@ type row = {name:string,email:string};
 class dataFactory{
 	rows:Array<row> = [];
 	constructor(){
-		this.rows.push({name:"shakir",email:"shakir@example.com"});
+		this.rows.push({name:"Shakir Mengrani",email:"shakir@example.com"});
+		this.rows.push({name:"Abdul Basit",email:"basit@example.com"});
+		this.rows.push({name:"Bilal",email:"bilal@example.com"});
 	}
+	
 }
 
 @Component({
@@ -21,10 +24,7 @@ class dataFactory{
 })
 
 @View({
-	 template: `
-    <h1>Sup {{ name }}</h1>
-    <div *ng-for="#row of rows; #i = index">{{ row.name }}</div>
-  `,
+	 templateUrl:'list.html',
   directives:[
 		NgFor
 	]
@@ -34,7 +34,8 @@ class myComp{
 	name:string = "";
 	rows:Array<row>;
 	constructor(dataFactory:dataFactory){
-		this.name = "shakir";	
+		this.name = "shakir";
+		console.log(dataFactory.rows);	
 		this.rows = dataFactory.rows;
 	}
 	
