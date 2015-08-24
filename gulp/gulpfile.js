@@ -23,3 +23,4 @@ gulp.task('default',['transpile','transpileView'],function(){
 	gulp.watch(path.html, ['transpileView']);
 	gulp.watch(path.scripts, ['transpile']);
 });
+module.exports = gulp;
