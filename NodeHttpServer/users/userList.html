@@ -1,0 +1,23 @@
+<html>
+
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-git2.min.js"></script>
+</head>
+
+<body>
+	<div>
+	</div>
+</body>
+<script>
+	$.ajax({
+	type:"get",
+	url:"http://127.0.0.1:8080/getUsers",
+	success:function(data){
+		console.log(data);
+	}
+});
+
+</script>
+
+</html>
