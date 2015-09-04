@@ -25,7 +25,7 @@ function getCustomOutput(res, data) {
 }
 // Set File as per URI / Route
 function route(URI, res) {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+    // res.writeHead(200, { 'Content-Type': 'text/html' });
     switch (URI) {
         case "/":
             getFileForUrl(res, fileMap.default);
