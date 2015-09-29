@@ -1,0 +1,8 @@
+extends ../template/template
+
+block content
+  h1= title
+  #doc
+  ul(style="font-weight:bold")
+   each row, index in todos
+    li #{row.Name} &nbsp; #{row.EMail}

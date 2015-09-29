@@ -9,7 +9,7 @@ var db = (function () {
     }
     db.connect = function () {
         var options = { server: { socketOptions: { keepAlive: 1 } } };
-        mongoose.connect("mongodb://127.0.0.1:27017", options);
+        mongoose.connect("mongodb://127.0.0.1:27017/shakir", options);
     };
     return db;
 })();

@@ -1,0 +1,15 @@
+{
+  "name": "MEAN1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "repository": {
+    "url": "https://github.com/shakirmengrani/typescript-examples/tree/master/Mean1"
+  },
+  "author": "Shakir Mengrani",
+  "license": "Freeware",
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*"
+  }
+}

@@ -1,16 +1,13 @@
 /// <reference path="../../typings/tsd.d.ts" />
 import express = require("express");
-import { Users } from "../model/Users";
+import mongoose = require("mongoose");
+import { Users } from '../model/Users';
 var route = express.Router();
 var UserData = new Users();
-route.get("/", (req: express.Request, res: express.Response) => {
-	UserData.load({},(err,doc):void=>{
-		console.log(doc);
-		res.render("index/index",{
-			title:"Hello Mean",
-			todos:doc
-		});
-	});
+route.get("/", (req: express.Request, res: express.Response): void=> {
+	var data = {
+		title: "Welcome to MEAN First Step"
+	};
+	res.render("index/index", data);
 });
-
 export = route;

@@ -8,11 +8,12 @@ var Users = (function () {
             EMail: { type: String, default: '' },
             Pass: { type: String, default: '' }
         });
-        this.UserData = mongoose.model("shakir", this.schema, "Users");
-        console.log("Registered");
+        if (!Users.UserData) {
+            Users.UserData = mongoose.model("shakir", this.schema, "Users");
+        }
     }
     Users.prototype.load = function (cond, callback) {
-        this.UserData.find(cond, callback);
+        Users.UserData.find(cond, callback);
     };
     return Users;
 })();
